@@ -165,6 +165,15 @@ $('.brands-slider').slick({
   arrows: true,
   prevArrow: '<button type="button" class="slider-slick-btn slider-slick-prev"></button>',
   nextArrow: '<button type="button" class="slider-slick-btn slider-slick-next"></button>',
+  responsive: [
+    {
+      breakpoint: 376,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+  ]
 });
 $('.product-slider').slick({
   infinite: true,
@@ -173,6 +182,15 @@ $('.product-slider').slick({
   arrows: true,
   prevArrow: '<button type="button" class="slider-slick-btn product-slick-btn slider-slick-prev"></button>',
   nextArrow: '<button type="button" class="slider-slick-btn product-slick-btn slider-slick-next"></button>',
+  responsive: [
+    {
+      breakpoint: 376,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+  ]
 });
 $('.blog-slider').slick({
   infinite: true,
@@ -181,4 +199,13 @@ $('.blog-slider').slick({
   arrows: true,
   prevArrow: '<button type="button" class="slider-slick-btn slider-slick-prev"></button>',
   nextArrow: '<button type="button" class="slider-slick-btn slider-slick-next"></button>',
+  responsive: [
+    {
+      breakpoint: 376,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+  ]
 });

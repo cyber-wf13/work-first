@@ -149,6 +149,7 @@ li {
     line-height: 1em;
     color: $text;
     border-radius: 7px;
+    text-transform: uppercase;
   }
 }
 .brands {
@@ -670,7 +671,6 @@ li {
 .form-contact{
   display: inline-block;
   padding: 60px 0px;
-  margin-left: 130px;
   width: 806px;
   &__items{
     text-align: right;
@@ -809,16 +809,17 @@ li {
 }
 .blog{
   &__content{
-    padding: 60px 130px;
+    padding: 60px 0px;
   }
   &__blog-card{
     margin-bottom: 30px;
+    margin-right: 17px;
     box-shadow: 0px 10px 30px #ECECEC;
   }
 }
 .about{
   &__content{
-    padding: 60px 130px 40px;
+    padding: 60px 0px 40px;
   }
   &__title{
     font-family: 'VisbyCF-ExtraBold';
@@ -860,3 +861,5 @@ li {
     max-width: 574px;
   }
 }
+
+@import 'media';

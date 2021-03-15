@@ -1,0 +1,134 @@
+@media (max-width: 376px){
+  .wrapper{
+    max-width: 335px;
+  }
+  .title{
+    padding: 30px 0px 20px;
+    font-size: 24px;
+  }
+  .header{
+    padding: 15px 20px;
+    justify-content: space-between;
+  }
+  .header__mobile-btn{
+    height: 40px;
+    width: 40px;
+    border: 1px solid $text;
+    border-radius: 5px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .header__tel-btn{
+    background-image: url('../images/phone.svg');
+    background-size: 20px 20px;
+    margin-right: 10px;
+  }
+  .header__menu-btn{
+    background-image: url('../images/menu-burger.svg');
+    background-size: 24px 24px;
+  }
+  .menu{
+    display: none;
+  }
+  .search{
+    padding: 0;
+    background-image: none;
+    min-height: auto;
+  }
+  .form{
+    width: 335px;
+    min-height: 430px;
+    &__title{
+      font-size: 22px;
+    }
+    .select{
+      margin-bottom: 10px;
+      width: 275px;
+      height: 45px;
+      font-size: 16px;
+    }
+    &__submit {
+      height: 45px;
+      width: 275px;
+    }
+  }
+  .brands{
+    &__text {
+      padding: 0px 0px 30px;
+      font-size: 14px;
+    }
+  }
+  .brands-slider{
+    &__item{
+      height: 80px;
+    }
+  }
+  .slider-slick-btn {
+    width: 20px;
+    height: 20px;
+  }
+  .slider-slick-prev {
+    left: -20px;
+  }
+  .slider-slick-next{
+    right: -20px;
+  }
+  .card-product__img{
+    margin: 0 auto;
+  }
+  .card-product__descr{
+    margin: 0 auto;
+  }
+  .blog{
+    .blog-card{
+      margin: 0;
+      box-shadow: 0px 10px 30px #ECECEC;
+    }
+    .blog-card__text{
+      font-size: 14px;
+    }
+  }
+  .delivery {
+    &__text {
+      padding-bottom: 30px;
+      line-height: 1.6em;
+    }
+    &__text-inner{
+      font-size: 14px;
+    }
+    &__card{
+      padding-bottom: 20px;
+    }
+    .link{
+      font-size: 16px;
+    }
+  }
+  .footer{
+    padding-top: 30px;
+  }
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 255px;
+    height: 121px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    &__item {
+      padding: 0px 0px 8px;
+      color: #a6a6a6;
+      &:nth-child(4n){
+        padding: 0;
+      }
+    }
+    &__link{
+      font-size: 16px;
+    }
+  }
+  .social {
+    padding: 20px 0px;
+  }
+}
