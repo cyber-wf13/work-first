@@ -1,8 +1,12 @@
 @import 'fonts';
 @import 'vars';
 .map{
-  padding: 30px 0px 30px 130px;
+  padding: 30px 0px;
   box-shadow: 0px 3px 30px #ECECEC;
+  &__list{
+    margin: 0 auto;
+    width: 1220px;
+  }
   &__list-item{
     display: inline-block;
     position: relative;
@@ -135,6 +139,9 @@
   }
   &__price-count--color{
     color: #B1B1B1;
+  }
+  &__img{
+    display: inline-block;
   }
 }
 .form-title{
@@ -282,4 +289,8 @@
     margin: 0 auto;
     line-height: 1.6em;
   }
+}
+.wrapper{
+  max-width: 1220px;
+  margin: 0 auto;
 }
