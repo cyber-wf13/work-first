@@ -6,6 +6,16 @@
     padding: 30px 0px 20px;
     font-size: 24px;
   }
+  .map{
+    max-width: 375px;
+    padding: 23px 20px;
+    &__list{
+      width: 100%;
+    }
+    &__list-item{
+      font-size: 12px;
+    }
+  }
   .header{
     padding: 15px 20px;
     justify-content: space-between;
@@ -130,5 +140,89 @@
   }
   .social {
     padding: 20px 0px;
+  }
+  .aside{
+    display: none;
+  }
+  .content{
+    max-width: 335px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 0px;
+  }
+  .content__aside-btn--mobile{
+    display: inline-block;
+    height: 40px;
+    width: 158px;
+    text-transform: uppercase;
+    font-family: 'VisbyCF-Bold';
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    background-color: transparent;
+    box-shadow: 0px 3px 30px #ececec;
+    margin-right: 35px;
+  }
+  .content__review {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    padding: 0;
+    margin: 30px 0px;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    &-title {
+      display: none;
+    }
+    &-label {
+      height: 40px;
+      width: 40px;
+      display: inline-block;
+      margin-left: 10px;
+      padding: 10px 10px;
+      box-shadow: 0px 3px 30px #ececec;
+    }
+    &-btn {
+      height: 40px;
+      width: 40px;
+      background-color: transparent;
+      background-size: 20px 20px;
+      background-position: center center;
+      position: static;
+      box-shadow: 0px 3px 30px #ececec;
+    }
+  }
+  .page-number {
+    position: relative;
+    font-size: 20px;
+    &__list {
+      padding: 30px 0px;
+    }
+    &__list-item {
+      padding: 0px 30px 0px 0px;
+      &:last-child{
+        padding: 0;
+      }
+    }
+    &__arrow-btn {
+      position: absolute;
+      top: 33px;
+      height: 18px;
+      width: 18px;
+      margin-right: 0;
+    }
+    &__arrow-prev {
+      left: -35px;
+    }
+    &__arrow-next {
+      right: -35px;
+    }
+    &__count{
+      display: block;
+    }
   }
 }

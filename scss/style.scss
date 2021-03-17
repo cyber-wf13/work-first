@@ -483,6 +483,9 @@ li {
   // padding: 0px 0px 0px 30px;
   max-width: 906px;
   // width: 68.75%;
+  &__aside-btn--mobile{
+    display: none;
+  }
   &__card {
     display: inline-block;
     width: 282px;
