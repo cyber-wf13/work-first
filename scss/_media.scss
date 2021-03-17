@@ -1,26 +1,26 @@
-@media (max-width: 376px){
-  .wrapper{
+@media (max-width: 376px) {
+  .wrapper {
     max-width: 335px;
   }
-  .title{
+  .title {
     padding: 30px 0px 20px;
     font-size: 24px;
   }
-  .map{
+  .map {
     max-width: 375px;
     padding: 23px 20px;
-    &__list{
+    &__list {
       width: 100%;
     }
-    &__list-item{
+    &__list-item {
       font-size: 12px;
     }
   }
-  .header{
+  .header {
     padding: 15px 20px;
     justify-content: space-between;
   }
-  .header__mobile-btn{
+  .header__mobile-btn {
     height: 40px;
     width: 40px;
     border: 1px solid $text;
@@ -29,30 +29,30 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
-  .header__tel-btn{
-    background-image: url('../images/phone.svg');
+  .header__tel-btn {
+    background-image: url("../images/phone.svg");
     background-size: 20px 20px;
     margin-right: 10px;
   }
-  .header__menu-btn{
-    background-image: url('../images/menu-burger.svg');
+  .header__menu-btn {
+    background-image: url("../images/menu-burger.svg");
     background-size: 24px 24px;
   }
-  .menu{
+  .menu {
     display: none;
   }
-  .search{
+  .search {
     padding: 0;
     background-image: none;
     min-height: auto;
   }
-  .form{
+  .form {
     width: 335px;
     min-height: 430px;
-    &__title{
+    &__title {
       font-size: 22px;
     }
-    .select{
+    .select {
       margin-bottom: 10px;
       width: 275px;
       height: 45px;
@@ -63,14 +63,14 @@
       width: 275px;
     }
   }
-  .brands{
+  .brands {
     &__text {
       padding: 0px 0px 30px;
       font-size: 14px;
     }
   }
-  .brands-slider{
-    &__item{
+  .brands-slider {
+    &__item {
       height: 80px;
     }
   }
@@ -81,21 +81,21 @@
   .slider-slick-prev {
     left: -20px;
   }
-  .slider-slick-next{
+  .slider-slick-next {
     right: -20px;
   }
-  .card-product__img{
+  .card-product__img {
     margin: 0 auto;
   }
-  .card-product__descr{
+  .card-product__descr {
     margin: 0 auto;
   }
-  .blog{
-    .blog-card{
+  .blog {
+    .blog-card {
       margin: 0;
-      box-shadow: 0px 10px 30px #ECECEC;
+      box-shadow: 0px 10px 30px #ececec;
     }
-    .blog-card__text{
+    .blog-card__text {
       font-size: 14px;
     }
   }
@@ -104,17 +104,17 @@
       padding-bottom: 30px;
       line-height: 1.6em;
     }
-    &__text-inner{
+    &__text-inner {
       font-size: 14px;
     }
-    &__card{
+    &__card {
       padding-bottom: 20px;
     }
-    .link{
+    .link {
       font-size: 16px;
     }
   }
-  .footer{
+  .footer {
     padding-top: 30px;
   }
   .footer-list {
@@ -130,21 +130,98 @@
     &__item {
       padding: 0px 0px 8px;
       color: #a6a6a6;
-      &:nth-child(4n){
+      &:nth-child(4n) {
         padding: 0;
       }
     }
-    &__link{
+    &__link {
       font-size: 16px;
     }
   }
   .social {
     padding: 20px 0px;
   }
-  .aside{
+  .aside {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 322px;
+    height: 100%;
+    z-index: 10;
+    background-color: #fff;
+    overflow-y: scroll;
+    padding: 0 20px;
+    box-shadow: 0px 4px 4px #ececec;
+  }
+  .aside__menu-btn--mobile {
+    position: fixed;
+    top: 0;
+    right: 12px;
+    height: 40px;
+    width: 40px;
+    background-image: url("../images/menu-close.svg");
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center center;
+    background-color: $normal;
+    border: none;
+    border-radius: 7px;
+    z-index: 11;
+  }
+  .form-spares {
+    position: relative;
+    &__wrapper-btn--mobile {
+      position: fixed;
+      bottom: 0;
+      width: 322px;
+      height: 70px;
+      background-color: #fff;
+      padding: 10px 0px;
+    }
+    &__submit {
+      display: inline-block;
+      vertical-align: bottom;
+      width: 202px;
+      height: 50px;
+      font-size: 18px;
+    }
+    &__reset {
+      background-image: url("../images/reset-trash.svg");
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      background-position: center center;
+      height: 50px;
+      width: 50px;
+      font-size: 0;
+      background-color: #b1b1b1;
+      border-radius: 7px;
+      text-align: center;
+      padding-top: 0px;
+    }
+  }
+  .selection-box {
+    &__title {
+      padding: 20px 0px 30px;
+      font-size: 18px;
+    }
+  }
+  .tags {
     display: none;
   }
-  .content{
+  .tags--mobile{
+    display: inline-block;
+    &__title {
+      padding: 30px 0px 10px;
+    }
+    &__item {
+      padding: 0px 5px 5px;
+    }
+  }
+  .filter{
+    font-size: 16px;
+  }
+  .content {
     max-width: 335px;
     display: flex;
     flex-direction: column;
@@ -152,12 +229,12 @@
     align-items: center;
     margin-left: 0px;
   }
-  .content__aside-btn--mobile{
+  .content__aside-btn--mobile {
     display: inline-block;
     height: 40px;
     width: 158px;
     text-transform: uppercase;
-    font-family: 'VisbyCF-Bold';
+    font-family: "VisbyCF-Bold";
     font-weight: 700;
     font-size: 16px;
     border: none;
@@ -204,7 +281,7 @@
     }
     &__list-item {
       padding: 0px 30px 0px 0px;
-      &:last-child{
+      &:last-child {
         padding: 0;
       }
     }
@@ -221,12 +298,12 @@
     &__arrow-next {
       right: -35px;
     }
-    &__count{
+    &__count {
       display: block;
     }
   }
   .card-list {
-    .card__img{
+    .card__img {
       height: 78px;
       width: 100px;
     }
@@ -240,12 +317,12 @@
     &__subdescr {
       font-size: 12px;
       padding-top: 10px;
-      &:nth-child(2){
+      &:nth-child(2) {
         font-size: 14px;
       }
     }
     &__price {
-      padding-top: 10px;    
+      padding-top: 10px;
       padding-left: 0px;
       margin-left: 110px;
     }
