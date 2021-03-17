@@ -225,4 +225,35 @@
       display: block;
     }
   }
+  .card-list {
+    .card__img{
+      height: 78px;
+      width: 100px;
+    }
+    &__descr {
+      max-width: 225px;
+      margin-left: 0px;
+      padding-left: 7px;
+      font-size: 16px;
+      color: #717171;
+    }
+    &__subdescr {
+      font-size: 12px;
+      padding-top: 10px;
+      &:nth-child(2){
+        font-size: 14px;
+      }
+    }
+    &__price {
+      padding-top: 10px;    
+      padding-left: 0px;
+      margin-left: 110px;
+    }
+    &__btn {
+      height: 34px;
+      width: 113px;
+      margin-top: 10px;
+      font-size: 12px;
+    }
+  }
 }
