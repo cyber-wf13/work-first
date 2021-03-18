@@ -15,6 +15,32 @@ let reviewBtn = document.querySelector('.content__review-btn');
 let formSparesRadio = document.querySelectorAll('.form-spares__input-radio');
 let formSparesHeaderRadio = document.querySelectorAll('.form-spares__header-radio');
 let formSparesReset = document.querySelector('.form-spares__reset');
+let menu = document.querySelector('.menu');
+let menuBtn = document.querySelector('.menu__btn--mobile');
+let headerMenuBtn = document.querySelector('.header__menu-btn');
+let aside = document.querySelector('.aside');
+let filterBtn = document.querySelector('.content__aside-btn--mobile');
+let asideBtn = document.querySelector('.aside__menu-btn--mobile');
+
+if(!isNull(filterBtn) || !isNull(asideBtn)){
+  filterBtn.addEventListener('click', ()=>{
+    aside.setAttribute('style', 'left:0;');
+    asideBtn.setAttribute('style', 'right:12px');
+  })
+  asideBtn.addEventListener('click', ()=>{
+    aside.removeAttribute('style');
+    asideBtn.removeAttribute('style');
+  })
+}
+
+if (!isNull(headerMenuBtn) || !isNull(menuBtn)){
+  headerMenuBtn.addEventListener('click', function(){
+    menu.setAttribute('style', 'top:0;')
+  })
+  menuBtn.addEventListener('click', function(){
+    menu.removeAttribute('style');
+  })
+}
 
 formSparesRadio.forEach((radio, index)=>{
   radio.addEventListener('change', ()=>{
