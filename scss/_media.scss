@@ -201,6 +201,7 @@
     transition: 0.3s;
   }
   .aside__menu-btn--mobile {
+    display: inline-block;
     position: fixed;
     top: 0;
     right: -100px;

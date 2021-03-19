@@ -94,7 +94,7 @@ function selectChoose() {
 
 }
 
-blogText.forEach(function (value, index) {
+blogText.forEach( function(value, index) {
   let words = blogText[index].textContent.split(' ');
   if (words.length >= 25) {
     let lastWordLength = words[words.length - 1].length;
