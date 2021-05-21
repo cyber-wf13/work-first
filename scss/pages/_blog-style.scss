@@ -1,0 +1,15 @@
+.blog {
+  &__content {
+    padding: 60px 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__blog-card {
+    margin-bottom: 30px;
+    margin-right: 17px;
+    box-shadow: 0px 10px 30px #ececec;
+  }
+  &__page-number {
+    display: none;
+  }
+}

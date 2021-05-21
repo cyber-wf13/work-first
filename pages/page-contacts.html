@@ -11,39 +11,51 @@
 
 <body>
   <header class="header">
-    <img src="../images/logo.svg" alt="AutoHub" class="logo">
-    <div class="header__btn-box">
-      <a href="tel:+38 093 699 09 81" class="header__tel-btn header__mobile-btn"></a>
-      <button class="header__menu-btn header__mobile-btn"></button>
+    <div class="container">
+      <div class="header__wrapper">
+        <img class="logo" src="../images/logo.svg" alt="AutoHub">
+        <div class="header__btn-box">
+          <a class="header__tel-btn header__mobile-btn" href="tel:+38 093 699 09 81"></a>
+          <button class="header__menu-btn header__mobile-btn"></button>
+        </div>
+        <nav class="menu">
+          <ul class="menu-list">
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="../index.html">Главная</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="page-spares.html">Запчасти</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="page-about.html">О нас</a>
+            </li>
+            <li class="menu-list__item menu-list__item--active">
+              <a class="menu-list__link" href="page-contacts.html">Контакты</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="page-blog.html">Блог</a>
+            </li>
+            <li class="menu-list__item menu-list__item-number">
+              <a class="menu-list__link" href="tel:+38 099 699 09 81">+38 093 699 09 81</a>
+            </li>
+            <button class="menu__btn menu__btn--mobile"></button>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <nav class="menu">
-      <ul class="menu-list">
-        <li class="menu-list__item"><a href="../index.html" class="menu-list__link">Главная</a>
-          <div class="menu-list__item--hover"></div>
-        </li>
-        <li class="menu-list__item"><a href="page-spares.html" class="menu-list__link">Запчасти</a>
-          <div class="menu-list__item--hover"></div>
-        </li>
-        <li class="menu-list__item"><a href="page-about.html" class="menu-list__link">О нас</a>
-          <div class="menu-list__item--hover"></div>
-        </li>
-        <li class="menu-list__item"><a href="page-contacts.html" class="menu-list__link">Контакты</a>
-          <div class="menu-list__item--hover"></div>
-        </li>
-        <li class="menu-list__item"><a href="page-blog.html" class="menu-list__link">Блог</a>
-          <div class="menu-list__item--hover"></div>
-        </li>
-        <li class="menu-list__item menu-list__item-number"><a href="tel:+38 099 699 09 81" class="menu-list__link">+38
-            093 699 09 81</a></li>
-        <button class="menu__btn menu__btn--mobile"></button>
-      </ul>
-    </nav>
   </header>
-  <div class="map">
-    <ul class="map__list">
-      <li class="map__list-item"><a href="#" class="map__list-link">Главная</a></li>
-      <li class="map__list-item map__list-item--active"><a href="#" class="map__list-link">Контакты</a></li>
-    </ul>
+
+ <div class="breadcrumbs">
+    <div class="container">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__list-item">
+          <a class="breadcrumbs__list-link" href="#">Главная</a>
+        </li>
+        <li class="breadcrumbs__list-item breadcrumbs__list-item--active">
+          <a class="breadcrumbs__list-link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </div>
   </div>
   <div class="wrapper">
 

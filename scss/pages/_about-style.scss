@@ -1,0 +1,44 @@
+.about {
+  &__content {
+    padding: 60px 0px 40px;
+  }
+  &__title {
+    font-family: "VisbyCF-ExtraBold";
+    font-weight: 800;
+    font-size: 24px;
+  }
+  &__text {
+    padding: 20px 0px 0px;
+    font-size: 16px;
+  }
+  &__list {
+    padding: 30px 0px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  &__list-item {
+    font-size: 16px;
+    padding: 10px 0px 10px 20px;
+    position: relative;
+    &::before {
+      content: "";
+      height: 10px;
+      width: 10px;
+      border: none;
+      border-radius: 50%;
+      background-color: $normal;
+      position: absolute;
+      top: 17px;
+      left: 0;
+    }
+  }
+  &__column-list {
+    padding: 40px 0px;
+  }
+}
+.column-list {
+  &__column {
+    display: inline-block;
+    vertical-align: text-top;
+    max-width: 574px;
+  }
+}
