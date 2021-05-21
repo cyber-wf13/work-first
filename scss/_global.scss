@@ -1,23 +1,117 @@
-@import 'fonts';
-@import 'vars';
-.map{
-  padding: 30px 0px;
-  box-shadow: 0px 3px 30px #ECECEC;
-  &__list{
-    margin: 0 auto;
-    width: 1220px;
+@import "fonts";
+@import "vars";
+.header {
+  background-color: #fcfcfc;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0px;
   }
-  &__list-item{
+  &__mobile-btn {
+    display: none;
+  }
+}
+.menu {
+  width: 100%;
+}
+.menu-list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 65px;
+  text-transform: uppercase;
+}
+.menu__btn {
+  display: none;
+}
+.menu-list__item {
+  position: relative;
+}
+.menu-list__item--active {
+  font-family: "VisbyCF-Heavy";
+  font-weight: 900;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    height: 7px;
+    opacity: 1;
+    background-color: $normal;
+    border-radius: 0px 0px 5px 5px;
+  }
+}
+.menu-list__item-number {
+  padding-right: 0px;
+  padding-left: 145px;
+  position: relative;
+  &::before {
+    content: "";
+    background-image: url("../images/phone.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 50%;
+    left: 120px;
+    transform: translateY(-50%);
+  }
+}
+.footer {
+  padding-top: 50px;
+  text-align: center;
+  box-shadow: 10px -10px 30px #ececec;
+}
+.footer-list {
+  display: flex;
+  justify-content: center;
+  &__item {
+    padding: 30px 60px 30px 0px;
+    color: #a6a6a6;
+  }
+}
+.social {
+  padding-bottom: 30px;
+  &__img {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: #a6a6a6;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3.25px;
+    margin-right: 20px;
+  }
+}
+.copyright {
+  max-width: 1200px;
+  padding: 11px 0px;
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+  border-radius: 5px;
+  margin: 0 auto;
+  &__text {
+    font-size: 14px;
+    color: #a6a6a6;
+    span {
+      color: $text;
+    }
+  }
+}
+.breadcrumbs {
+  padding: 30px 0px;
+  box-shadow: 0px 3px 30px #ececec;
+  &__list-item {
     display: inline-block;
     position: relative;
     padding-right: 34px;
     font-size: 16px;
-    &:not(.map__list-item.map__list-item--active){
-      color: #878787;
-    }
-    &:not(.map__list-item.map__list-item--active)::after{
-      content: '';
-      background-image: url('../images/menu-arrow.svg');
+    color: #878787;
+    &::after {
+      content: "";
+      background-image: url("../images/menu-arrow.svg");
       background-repeat: no-repeat;
       background-size: 100% 100%;
       background-position: center center;
@@ -27,6 +121,12 @@
       top: 50%;
       right: 10px;
       transform: translateY(-50%);
+    }
+    &:last-child{
+      color: $text;
+    }
+    &:last-child::after{
+      display: none;
     }
   }
 }
@@ -62,14 +162,13 @@
     padding: 6px 15px;
     width: 100%;
     display: block;
-
   }
 }
 .select.is-active .select__items {
   display: block;
 }
-.title{
-  font-family: 'VisbyCF-Bold';
+.title {
+  font-family: "VisbyCF-Bold";
   font-weight: 700;
   font-size: 36px;
   line-height: 1em;
@@ -78,21 +177,23 @@
   text-transform: uppercase;
   padding: 90px 0px 50px;
 }
-.title-list{
-  font-family: 'VisbyCF-ExtraBold';
+.title-list {
+  font-family: "VisbyCF-ExtraBold";
   font-weight: 800;
 }
-.blog-card{
-  display: inline-block;
-  vertical-align: top;
+.blog-card {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #fff;
   min-height: 330px;
   padding: 30px 30px 40px;
-  margin-right: 30px;
-  box-shadow: 0px 10px 20px #ececec;
+  box-shadow: 0px 0px 5px 2px #ececec;
   border-radius: 10px;
   transition: 0.2s;
   outline: none;
+  width: 385px !important;
+  cursor: pointer;
   &:hover {
     background-color: $normal;
     .link {
@@ -115,58 +216,59 @@
     padding: 10px 0px 40px;
   }
 }
-.link{
-  font-family: 'VisbyCF-ExtraBold';
+.link {
+  font-family: "VisbyCF-ExtraBold";
   font-weight: 800;
   font-size: 18px;
   color: $hover;
 }
-.card{
-    min-height: 310px;
-    width: 282px;
-    text-align: center;
-    outline: none;
-  &__descr{
-    font-family: 'VisbyCF-Bold';
+.card {
+  min-height: 310px;
+  width: 282px;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+  &__descr {
+    font-family: "VisbyCF-Bold";
     font-weight: 700;
     max-width: 284px;
     padding: 10px 0px;
   }
-  &__price-count{
-    font-family: 'VisbyCF-ExtraBold';
+  &__price-count {
+    font-family: "VisbyCF-ExtraBold";
     font-weight: 800;
     font-size: 22px;
   }
-  &__price-count--color{
-    color: #B1B1B1;
+  &__price-count--color {
+    color: #b1b1b1;
   }
-  &__img{
+  &__img {
     display: inline-block;
   }
 }
-.form-title{
-  font-family: 'VisbyCF-Bold';
+.form-title {
+  font-family: "VisbyCF-Bold";
   font-weight: 700;
   font-size: 16px;
   line-height: 1em;
   color: $text;
   text-align: center;
-  span{
-    font-family: 'VisbyCF-Medium';
+  span {
+    font-family: "VisbyCF-Medium";
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2em;
-    color: #8E8E8E;
+    color: #8e8e8e;
   }
 }
-.scroll{
+.scroll {
   height: 100%;
   overflow-y: auto;
-  scrollbar-color: #E7E7E7 #989898;
+  scrollbar-color: #e7e7e7 #989898;
   scrollbar-width: thin;
   &::-webkit-scrollbar {
     width: 5px;
-    background-color: #E7E7E7;
+    background-color: #e7e7e7;
     border-radius: 5px;
   }
 
@@ -175,17 +277,17 @@
     border-radius: 5px;
   }
 }
-.range{
-  input[type=range] {
+.range {
+  input[type="range"] {
     width: 100%;
     margin: 5px 0;
     background-color: transparent;
     -webkit-appearance: none;
   }
-  input[type=range]:focus {
+  input[type="range"]:focus {
     outline: none;
   }
-  input[type=range]::-webkit-slider-runnable-track {
+  input[type="range"]::-webkit-slider-runnable-track {
     background: #fcef3a;
     border: 0;
     border-radius: 5px;
@@ -193,7 +295,7 @@
     height: 5px;
     cursor: pointer;
   }
-  input[type=range]::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
     margin-top: -5px;
     width: 15px;
     height: 15px;
@@ -203,10 +305,10 @@
     cursor: pointer;
     -webkit-appearance: none;
   }
-  input[type=range]:focus::-webkit-slider-runnable-track {
+  input[type="range"]:focus::-webkit-slider-runnable-track {
     background: #fcf049;
   }
-  input[type=range]::-moz-range-track {
+  input[type="range"]::-moz-range-track {
     background: #fcef3a;
     border: 0;
     border-radius: 5px;
@@ -214,7 +316,7 @@
     height: 5px;
     cursor: pointer;
   }
-  input[type=range]::-moz-range-thumb {
+  input[type="range"]::-moz-range-thumb {
     width: 15px;
     height: 15px;
     background: #ffffff;
@@ -222,7 +324,7 @@
     border-radius: 15px;
     cursor: pointer;
   }
-  input[type=range]::-ms-track {
+  input[type="range"]::-ms-track {
     background: transparent;
     border-color: transparent;
     border-width: 7.6px 0;
@@ -231,17 +333,17 @@
     height: 5px;
     cursor: pointer;
   }
-  input[type=range]::-ms-fill-lower {
+  input[type="range"]::-ms-fill-lower {
     background: #fcee2b;
     border: 0;
     border-radius: 10px;
   }
-  input[type=range]::-ms-fill-upper {
+  input[type="range"]::-ms-fill-upper {
     background: #fcef3a;
     border: 0;
     border-radius: 10px;
   }
-  input[type=range]::-ms-thumb {
+  input[type="range"]::-ms-thumb {
     width: 15px;
     height: 15px;
     background: #ffffff;
@@ -251,36 +353,36 @@
     margin-top: 0px;
     /*Needed to keep the Edge thumb centred*/
   }
-  input[type=range]:focus::-ms-fill-lower {
+  input[type="range"]:focus::-ms-fill-lower {
     background: #fcef3a;
   }
-  input[type=range]:focus::-ms-fill-upper {
+  input[type="range"]:focus::-ms-fill-upper {
     background: #fcf049;
   }
   /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
   how to remove the virtical space around the range input in IE*/
-  @supports (-ms-ime-align:auto) {
+  @supports (-ms-ime-align: auto) {
     /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-    input[type=range] {
+    input[type="range"] {
       margin: 0;
       /*Edge starts the margin from the thumb, not the track as other browsers do*/
     }
   }
-  &__count{
-    font-family: 'VisbyCF-Bold';
+  &__count {
+    font-family: "VisbyCF-Bold";
     font-weight: 700;
     font-size: 14px;
     padding: 25px 0px 20px;
   }
-  &__count-currency{
+  &__count-currency {
     display: inline;
-    font-family: 'VisbyCF-Medium';
+    font-family: "VisbyCF-Medium";
     font-weight: 500;
-    color: #B1B1B1;
+    color: #b1b1b1;
   }
 }
-.textbox{
-  &__title{
+.textbox {
+  &__title {
     padding: 50px 0px;
   }
   &__text {
@@ -290,7 +392,13 @@
     line-height: 1.6em;
   }
 }
-.wrapper{
+.wrapper {
   max-width: 1220px;
   margin: 0 auto;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 15px;
 }

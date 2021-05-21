@@ -22,44 +22,44 @@ let aside = document.querySelector('.aside');
 let filterBtn = document.querySelector('.content__aside-btn--mobile');
 let asideBtn = document.querySelector('.aside__menu-btn--mobile');
 
-if(!isNull(filterBtn) || !isNull(asideBtn)){
-  filterBtn.addEventListener('click', ()=>{
+if (!isNull(filterBtn) || !isNull(asideBtn)) {
+  filterBtn.addEventListener('click', () => {
     aside.setAttribute('style', 'left:0;');
     asideBtn.setAttribute('style', 'right:12px');
   })
-  asideBtn.addEventListener('click', ()=>{
+  asideBtn.addEventListener('click', () => {
     aside.removeAttribute('style');
     asideBtn.removeAttribute('style');
   })
 }
 
-if (!isNull(headerMenuBtn) || !isNull(menuBtn)){
-  headerMenuBtn.addEventListener('click', function(){
+if (!isNull(headerMenuBtn) || !isNull(menuBtn)) {
+  headerMenuBtn.addEventListener('click', function () {
     menu.setAttribute('style', 'top:0;')
   })
-  menuBtn.addEventListener('click', function(){
+  menuBtn.addEventListener('click', function () {
     menu.removeAttribute('style');
   })
 }
 
-formSparesRadio.forEach((radio, index)=>{
-  radio.addEventListener('change', ()=>{
+formSparesRadio.forEach((radio, index) => {
+  radio.addEventListener('change', () => {
     radio.parentElement.parentElement.parentElement.children.item(0).setAttribute('checked', '');
   })
 });
 
-if (!isNull(formSparesReset)){
-  formSparesReset.addEventListener('click', function (){
+if (!isNull(formSparesReset)) {
+  formSparesReset.addEventListener('click', function () {
     headerItem.forEach((item, index) => {
-        select[index].classList.remove('is-active');
+      select[index].classList.remove('is-active');
     })
-    formSparesRadio.forEach((radio, index)=>{
+    formSparesRadio.forEach((radio, index) => {
       radio.parentElement.parentElement.parentElement.children.item(0).removeAttribute('checked');
     });
-      rangeMax[0].innerHTML = '1991';
-      rangeMax[1].innerHTML = 40;
-      rangeMaxCurrency.innerHTML = 40 / 100;
-  
+    rangeMax[0].innerHTML = '1991';
+    rangeMax[1].innerHTML = 40;
+    rangeMaxCurrency.innerHTML = 40 / 100;
+
   });
 }
 
@@ -74,9 +74,9 @@ selectHeader.forEach((item, index) => {
 })
 
 selectItem.forEach(item => {
-  if (item.classList.contains('form-spares__select-item')){
+  if (item.classList.contains('form-spares__select-item')) {
     return;
-  }else{
+  } else {
     item.addEventListener('click', selectChoose);
   }
 });
@@ -94,12 +94,15 @@ function selectChoose() {
 
 }
 
-blogText.forEach( function(value, index) {
-  let words = blogText[index].textContent.split(' ');
-  if (words.length >= 25) {
-    let lastWordLength = words[words.length - 1].length;
-    let newText = blogText[index].textContent.slice(0, (155 - lastWordLength)) + '...';
-    blogText[index].textContent = newText;
+blogText.forEach(function (value) {
+  let words = value.textContent.split(' ');
+  let wordCount = 18;
+  if (words.length >= wordCount) {
+    let newText = words.slice(0, wordCount);
+    newText[newText.length-1] = `${newText[newText.length-1]} ...`;
+    value.textContent = newText.join(' ');
+  }else{
+    value.textContent = words.join(' ');
   }
 });
 

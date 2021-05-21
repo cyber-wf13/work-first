@@ -51,68 +51,6 @@ li {
   list-style: none;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 0px;
-  background-color: #fcfcfc;
-}
-.menu-list {
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 65px;
-  text-transform: uppercase;
-}
-.menu__btn{
-  display: none;
-}
-.menu-list__item {
-  padding-right: 60px;
-  position: relative;
-  &:hover {
-    content: "";
-    font-family: "VisbyCF-Heavy";
-    font-weight: 900;
-    .menu-list__item--hover {
-      opacity: 1;
-    }
-  }
-  &.menu-list__item-number:hover {
-    content: "";
-    font-family: "VisbyCF-DemiBold";
-    font-weight: 600;
-  }
-}
-.menu-list__item--hover {
-  display: inline-block;
-  position: absolute;
-  top: -29px;
-  left: 0;
-  width: calc(100% - 60px);
-  height: 7px;
-  transition: 0.4s;
-  opacity: 0;
-  background-color: $normal;
-  border-radius: 0px 0px 5px 5px;
-}
-.menu-list__item-number {
-  padding-right: 0px;
-  padding-left: 180px;
-  position: relative;
-  &::before {
-    content: "";
-    background-image: url("../images/phone.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 14px;
-    width: 14px;
-    position: absolute;
-    top: 50%;
-    left: 155px;
-    transform: translateY(-50%);
-  }
-}
 .search {
   background-image: url("../images/header-bg.png");
   background-repeat: no-repeat;
@@ -204,6 +142,7 @@ li {
 .blog-slider {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 15px 0;
 }
 .slick-list {
   padding: 5px 0;
@@ -218,13 +157,13 @@ li {
   &__info {
     max-width: 1200px;
     margin: 0 auto;
+    padding-bottom: 90px;
   }
   &__card {
     display: inline-block;
     min-height: 80px;
     width: 280px;
     margin-right: 15px;
-    padding-bottom: 90px;
   }
   &__card-icon {
     display: inline-block;
@@ -251,47 +190,6 @@ li {
   }
   &__card-subtitle {
     color: #b1b1b1;
-  }
-}
-.footer {
-  padding-top: 50px;
-  text-align: center;
-  box-shadow: 10px -10px 30px #ececec;
-}
-.footer-list {
-  display: flex;
-  justify-content: center;
-  &__item {
-    padding: 30px 60px 30px 0px;
-    color: #a6a6a6;
-  }
-}
-.social {
-  padding-bottom: 30px;
-  &__img {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    background-color: #a6a6a6;
-    border-radius: 50%;
-    text-align: center;
-    padding-top: 3.25px;
-    margin-right: 20px;
-  }
-}
-.copyright {
-  max-width: 1200px;
-  padding: 11px 0px;
-  text-align: center;
-  border-top: 1px solid #e7e7e7;
-  border-radius: 5px;
-  margin: 0 auto;
-  &__text {
-    font-size: 14px;
-    color: #a6a6a6;
-    span {
-      color: $text;
-    }
   }
 }
 .aside {
@@ -397,7 +295,6 @@ li {
       background-size: 10px 10px;
       background-position: center center;
     }
-
   }
   &__submit {
     border: none;
@@ -479,7 +376,7 @@ li {
     padding: 0px 5px 3px;
   }
 }
-.tags--mobile{
+.tags--mobile {
   display: none;
 }
 .content {
@@ -489,7 +386,7 @@ li {
   // padding: 0px 0px 0px 30px;
   max-width: 906px;
   // width: 68.75%;
-  &__aside-btn--mobile{
+  &__aside-btn--mobile {
     display: none;
   }
   &__card {
@@ -498,21 +395,22 @@ li {
     margin: 30px 0 30px 0px;
     // margin: 30px 30px 30px 0px;
     position: relative;
-    &:nth-child(3n+3){
+    &:nth-child(3n + 3) {
       margin-right: 24px;
       margin-left: 24px;
     }
-    &:hover{
-      .content__card-btn{
+    &:hover {
+      .content__card-btn {
         z-index: 10;
         opacity: 1;
+        cursor: pointer;
       }
     }
   }
   &__card-descr {
     max-width: 286px;
   }
-  &__card-btn{
+  &__card-btn {
     display: block;
     margin-top: 30px;
     border: none;
@@ -532,7 +430,6 @@ li {
     transform: translateX(-50%);
     transition: 0.3s;
   }
-
 }
 .content__review {
   position: relative;
@@ -551,6 +448,7 @@ li {
     width: 20px;
     display: inline-block;
     margin-left: 20px;
+    cursor: pointer;
   }
   &-btn {
     border: none;
@@ -562,9 +460,10 @@ li {
     background-color: transparent;
     position: absolute;
     right: 15px;
+    cursor: pointer;
   }
 }
-.aside__menu-btn--mobile{
+.aside__menu-btn--mobile {
   display: none;
 }
 .content__review-radio {
@@ -605,7 +504,7 @@ li {
   width: 100%;
   min-height: auto;
   text-align: left;
-  &:nth-child(3n+3){
+  &:nth-child(3n + 3) {
     margin-right: 0px;
     margin-left: 0px;
   }
@@ -680,26 +579,26 @@ li {
     padding: 0px 40px 0px 0px;
   }
 }
-.form-contact{
+.form-contact {
   display: inline-block;
   padding: 60px 0px;
   width: 806px;
-  &__items{
+  &__items {
     text-align: right;
   }
-  &__title{
-    font-family: 'VisbyCF-Bold';
+  &__title {
+    font-family: "VisbyCF-Bold";
     font-weight: 700;
     font-size: 24px;
     text-transform: uppercase;
   }
-  &__text{
+  &__text {
     font-size: 18px;
     line-height: 1.5em;
     width: 802px;
     padding-top: 30px;
   }
-  &__input-item{
+  &__input-item {
     display: inline-block;
     border: 1px solid #898989;
     border-radius: 7px;
@@ -708,101 +607,101 @@ li {
     margin: 30px 30px 30px 0px;
     color: #898989;
     padding-left: 20px;
-    &:nth-child(1){
+    &:nth-child(1) {
       margin-bottom: 0px;
     }
-    &:nth-child(2){
+    &:nth-child(2) {
       margin-bottom: 0px;
     }
-    &:nth-child(even){
+    &:nth-child(even) {
       margin-right: 0px;
     }
   }
-  &__input-message{
+  &__input-message {
     width: 100%;
     height: 120px;
     padding-bottom: 84px;
     margin-top: 0px;
   }
-  &__input-submit{
+  &__input-submit {
     border: none;
     border-radius: 7px;
     background-color: $normal;
     text-transform: uppercase;
-    font-family: 'VisbyCF-ExtraBold';
+    font-family: "VisbyCF-ExtraBold";
     font-weight: 800;
     font-size: 18px;
     height: 50px;
     width: 282px;
   }
 }
-.contacts{
+.contacts {
   display: inline-block;
   vertical-align: top;
   width: 385px;
   padding: 210px 0px 0px 60px;
-  &__item{
+  &__item {
     padding-bottom: 28px;
   }
-  &__title{
+  &__title {
     position: relative;
-    font-family: 'VisbyCF-ExtraBold';
+    font-family: "VisbyCF-ExtraBold";
     font-weight: 800;
     font-size: 18px;
     padding-bottom: 10px;
   }
-  &__title-address{
-    &::before{
-      content: '';
+  &__title-address {
+    &::before {
+      content: "";
       position: absolute;
       height: 20px;
       width: 20px;
       top: 0;
       left: -30px;
-      background-image: url('../images/placeholder.svg');
+      background-image: url("../images/placeholder.svg");
       background-repeat: no-repeat;
       background-size: cover;
-    }    
-    & + span{
+    }
+    & + span {
       display: block;
     }
   }
-  &__title-number{
-    &::before{
-      content: '';
+  &__title-number {
+    &::before {
+      content: "";
       position: absolute;
       height: 20px;
       width: 20px;
       top: 0;
       left: -30px;
-      background-image: url('../images/phone.svg');
+      background-image: url("../images/phone.svg");
       background-repeat: no-repeat;
       background-size: cover;
     }
   }
-  &__title-email{
-    &::before{
-      content: '';
+  &__title-email {
+    &::before {
+      content: "";
       position: absolute;
       height: 20px;
       width: 20px;
       top: 0;
       left: -30px;
-      background-image: url('../images/mail.svg');
+      background-image: url("../images/mail.svg");
       background-repeat: no-repeat;
       background-size: cover;
     }
   }
-  &__text{
+  &__text {
     display: inline-block;
     padding-bottom: 5px;
     min-width: 155px;
   }
-  &__social-items{
+  &__social-items {
     display: inline-block;
     line-height: 0;
   }
-  &__social-item{
+  &__social-item {
     display: inline-block;
     height: 20px;
     width: 20px;
@@ -812,49 +711,49 @@ li {
     background-position: center center;
   }
 }
-.location{
+.location {
   width: 100%;
   height: 500px;
-  background-image: url('../images/map.png');
+  background-image: url("../images/map.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
-.blog{
-  &__content{
+.blog {
+  &__content {
     padding: 60px 0px;
   }
-  &__blog-card{
+  &__blog-card {
     margin-bottom: 30px;
     margin-right: 17px;
-    box-shadow: 0px 10px 30px #ECECEC;
+    box-shadow: 0px 10px 30px #ececec;
   }
-  &__page-number{
+  &__page-number {
     display: none;
   }
 }
-.about{
-  &__content{
+.about {
+  &__content {
     padding: 60px 0px 40px;
   }
-  &__title{
-    font-family: 'VisbyCF-ExtraBold';
+  &__title {
+    font-family: "VisbyCF-ExtraBold";
     font-weight: 800;
     font-size: 24px;
   }
-  &__text{
+  &__text {
     padding: 20px 0px 0px;
     font-size: 16px;
   }
-  &__list{
+  &__list {
     padding: 30px 0px;
-    border-bottom: 1px solid #E7E7E7;
+    border-bottom: 1px solid #e7e7e7;
   }
-  &__list-item{
+  &__list-item {
     font-size: 16px;
     padding: 10px 0px 10px 20px;
     position: relative;
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       height: 10px;
       width: 10px;
       border: none;
@@ -865,16 +764,16 @@ li {
       left: 0;
     }
   }
-  &__column-list{
+  &__column-list {
     padding: 40px 0px;
   }
 }
-.column-list{
-  &__column{
+.column-list {
+  &__column {
     display: inline-block;
     vertical-align: text-top;
     max-width: 574px;
   }
 }
 
-@import 'media';
+@import "pages/media";
