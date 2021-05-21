@@ -1,0 +1,40 @@
+@media (max-width: 376px) {
+  .blog {
+    .blog-card {
+      margin: 0;
+      box-shadow: 0px 10px 30px #ececec;
+    }
+    .blog-card__text {
+      font-size: 14px;
+    }
+  }
+
+  .blog{
+    &__content{
+      padding: 30px 0px 0px;
+    }
+    &__blog-card{
+      margin-bottom: 30px;
+      margin-right: 0px;
+      box-shadow: 0px 10px 30px #ECECEC;
+    }
+    &__page-number--mobile{
+      display: block;
+      .page-number__list {
+        padding: 0px 0px 30px;
+      }
+      .page-number__list-item {
+        padding: 0px 20px 0px 0px;
+      }
+      .page-number__arrow-btn {
+        top: 3px;
+      }
+      .page-number__arrow-prev {
+        left: 0px;
+      }
+      .page-number__arrow-next {
+        right: 0px;
+      }
+    }
+  }
+}
