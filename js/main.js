@@ -1,3 +1,23 @@
+$(".select__header").each(function(){
+  $(this).on('click',selectToggle);
+})
+$(".select__item").each(function(){
+  $(this).on('click',selectChoose);
+})
+
+function selectToggle() {
+  this.parentElement.classList.toggle('is-active');
+}
+
+function selectChoose() {
+  let text = this.innerText,
+    select = this.closest('.select'),
+    currentText = select.querySelector('.select__current');
+  currentText.innerText = text;
+  select.classList.remove('is-active');
+}
+
+
 $('.content__aside-btn--mobile').on('click',()=>{
   $('.aside').css('left', '0');
   $('.aside__menu-btn--mobile').css('right', '12px');
@@ -84,3 +104,26 @@ $(".slider-price__amount-input").val($( "#price" ).slider( "values", 0 ) + " - "
 $(".slider-price__amount-value").text($( "#price" ).slider( "values", 0 ) + 
 " - " + $( "#price" ).slider( "values", 1 ));
 $('.slider__currency-exchange').text("4 - 230 $")
+
+$(".form-spares__reset").on('click', ()=>{
+  $(".accordion__header").each(function(){
+    $(this).attr('data-active', '');
+  })
+  $(".accordion__content").each(function(){
+    $(".accordion").accordion( "option", "active", false );
+  });
+  setTimeout(() => {
+    $(".slider-year__amount-value").val($( "#year" ).slider( "option", "min" ) + " - " + $( "#year" ).slider( "option", "max"));
+    
+    $(".slider-price__amount-input").val($( "#price" ).slider( "option", "min" ) + " - " + $( "#price" ).slider( "option", "max" ));
+  }, 100);
+
+  $( "#year" ).slider( "values", [1967, 2014] );
+
+  $(".slider-price__amount-value").text($( "#price" ).slider( "option", "min" ) + 
+  " - " + $( "#price" ).slider( "option", "max" ));
+
+  $('.slider__currency-exchange').text("4 - 230 $")
+
+  $( "#price" ).slider( "values", [100, 23014] );
+})

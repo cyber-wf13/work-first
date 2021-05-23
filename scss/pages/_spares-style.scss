@@ -20,6 +20,33 @@
     border: 1px solid #898989;
     border-radius: 5px;
   }
+  &__submit{
+    display: block;
+    height: 50px;
+    width: 282px;
+    border: none;
+    border-radius: 7px;
+    background-color: $normal;
+    font-family: 'VisbyCF-ExtraBold';
+    font-size: 20px;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0 10px;
+    cursor: pointer;
+  }
+  &__reset{
+    display: block;
+    margin: 0 auto;
+    font-family: 'VisbyCF-Bold';
+    font-size: 18px;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
 }
 
 .selection-box {
@@ -39,7 +66,7 @@
     font-family: "VisbyCF-Bold";
     padding: 20px 0;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 15px;
   }
   &__title-head{
     font-size: 18px;
@@ -53,6 +80,10 @@
 
 .selection-box__range {
   height: auto;
+}
+
+.selection-box__range--last::after {
+  display: none;
 }
 
 .tags {
@@ -81,9 +112,7 @@
   display: inline-block;
   vertical-align: top;
   margin-left: 23px;
-  // padding: 0px 0px 0px 30px;
   max-width: 906px;
-  // width: 68.75%;
   &__aside-btn--mobile {
     display: none;
   }
@@ -91,7 +120,6 @@
     display: inline-block;
     width: 282px;
     margin: 30px 0 30px 0px;
-    // margin: 30px 30px 30px 0px;
     position: relative;
     &:nth-child(3n + 3) {
       margin-right: 24px;
@@ -277,9 +305,161 @@
     padding: 0px 40px 0px 0px;
   }
 }
-.my__class__accord{
-  border: 2px solid #ccc;
+
+.accordion{
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  &__header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 20px;
+      width: 20px;
+      border: 1px solid #898989;
+      border-radius: 3px;
+      background-color: transparent;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 20px;
+      width: 25px;
+      background-image: url(../images/select-arrow-down.svg);
+      background-size: cover;
+      transition: all 0.2s;
+    }
+  }
+  &__header[data-active='active'],
+  &__header.ui-accordion-header-active{
+    &::before{
+      content: '';
+      background-color: $normal;
+      border: none;
+      background-image: url(../images/confirm.svg);
+      background-repeat: no-repeat;
+      background-size: 12px 12px;
+      background-position: center center;
+    }
+    &::after{
+      content: '';
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+  &__header.ui-accordion-header-collapsed::after{
+    content: '';
+    transform: translateY(-50%) rotate(0deg);
+  }
+  &__title{
+    font-family: "VisbyCF-Bold";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1em;
+    color: $text;
+    padding-right: 5px;
+  }
+  &__count{
+    font-size: 14px;
+    color: #8E8E8E;
+  }
+  &__content{
+    padding: 10px 0 15px 25px;
+  }
+  &__input-item{
+    width: 237px;
+    height: 35px;
+    border: 1px solid #898989;
+    border-radius: 5px;
+  }
+  &__label{
+    display: inline-block;
+    margin: 5px 0;
+  }
+  &__radio-name{
+    font-size: 14px;
+    line-height: 1em;
+    max-width: 206px;
+    display: inline-block;
+    position: relative;
+    padding-left: 21px;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      border: 1px solid #898989;
+      border-radius: 50%;
+      background-color: transparent;
+    }
+  }
+  &__radio:checked + .accordion__radio-name::before{
+    content: '';
+    background-image: url(../images/radio-dot.svg);
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+    background-position: 3px 3px;
+  }
+  &__radio-count{
+    font-size: 12px;
+    color: #8E8E8E;
+  }
 }
-.my__class__accord__content{
-  background-color: red;
+
+.slider{
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #E7E7E7;
+  position: relative;
+  cursor: pointer;
+  &__handle{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    height: 15px;
+    width: 15px;
+    border: 3px solid $normal;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+  }
+  &__amount{
+    font-family: 'VisbyCF-Bold';
+    font-size: 14px;
+    line-height: 1em;
+    padding: 25px 0 20px;
+  }
+  &__amount-value{
+    border: none;
+    background-color: transparent;
+  }
+  &__currency{
+    display: inline;
+    font-family: 'VisbyCF-DemiBold';
+    font-size: 14px;
+    line-height: 1em;
+  }
+  &__currency-exchange{
+    color: #B1B1B1;
+  }
+  &__range{
+    background-color: $normal;
+    position: absolute;
+    height: 100%;
+  }
 }
