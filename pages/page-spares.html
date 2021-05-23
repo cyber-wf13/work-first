@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="../css/jquery-ui.css"> -->
   <link rel="stylesheet" href="../css/style.min.css">
   <title>Auto Hub</title>
 </head>
@@ -517,11 +518,27 @@
 
         <div class="selection-box selection-box__range">
           <h2 class="selection-box__title">Год</h2>
-          <div id="slider"></div>
+
+          <div class="slider slider-year" id="year"></div>
+          <div class="slider__amount">
+            <span class="slider__amount-title">Год:</span>
+            <input class="slider__amount-value slider-year__amount-value" type="text">
+          </div>
+
         </div>
 
         <div class="selection-box selection-box__range">
           <h2 class="selection-box__title">Цена</h2>
+
+          <div class="slider slider-price" id="price"></div>
+          <div class="slider__amount">
+            <input class="slider-price__amount-input visually-hidden" type="text">
+            <span class="slider__amount-title">Цена:</span>
+            <span class="slider__amount-value slider-price__amount-value" type="text"></span>
+            <p class="slider__currency">UAH / 
+              <span class="slider__currency-exchange"></span>
+            </p>
+          </div>
 
         </div>
 
