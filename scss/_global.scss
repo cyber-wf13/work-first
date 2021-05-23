@@ -10,6 +10,18 @@
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.visually-hidden{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	border: 0;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
 .header {
   background-color: #fcfcfc;
   &__wrapper {
@@ -140,43 +152,7 @@
     }
   }
 }
-.select {
-  position: relative;
-  width: 325px;
-  height: 50px;
-  color: #fff;
-  background-color: transparent;
-  &__header {
-    border: 1px solid #fff;
-    border-radius: 7px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    padding: 0px 15px;
-  }
-  &__items {
-    border: 1px solid #fff;
-    border-radius: 3.5px 3.5px 7px 7px;
-    background-color: #000;
-    border-top: 0;
-    position: absolute;
-    top: 52px;
-    width: 100%;
-    display: none;
-    z-index: 99;
-  }
-  &__item {
-    cursor: pointer;
-    padding: 6px 15px;
-    width: 100%;
-    display: block;
-  }
-}
-.select.is-active .select__items {
-  display: block;
-}
+
 .title {
   font-family: "VisbyCF-Bold";
   font-weight: 700;
@@ -274,6 +250,7 @@
 .scroll {
   height: 100%;
   overflow-y: auto;
+  padding-right: 20px;
   scrollbar-color: #e7e7e7 #989898;
   scrollbar-width: thin;
   &::-webkit-scrollbar {
@@ -286,111 +263,14 @@
     background-color: #989898;
     border-radius: 5px;
   }
+  // &__spares{
+    
+  // }
+  // &__param{
+  //   height: 100%;
+  // }
 }
-.range {
-  input[type="range"] {
-    width: 100%;
-    margin: 5px 0;
-    background-color: transparent;
-    -webkit-appearance: none;
-  }
-  input[type="range"]:focus {
-    outline: none;
-  }
-  input[type="range"]::-webkit-slider-runnable-track {
-    background: #fcef3a;
-    border: 0;
-    border-radius: 5px;
-    width: 100%;
-    height: 5px;
-    cursor: pointer;
-  }
-  input[type="range"]::-webkit-slider-thumb {
-    margin-top: -5px;
-    width: 15px;
-    height: 15px;
-    background: #ffffff;
-    border: 3px solid #fcef3a;
-    border-radius: 15px;
-    cursor: pointer;
-    -webkit-appearance: none;
-  }
-  input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: #fcf049;
-  }
-  input[type="range"]::-moz-range-track {
-    background: #fcef3a;
-    border: 0;
-    border-radius: 5px;
-    width: 100%;
-    height: 5px;
-    cursor: pointer;
-  }
-  input[type="range"]::-moz-range-thumb {
-    width: 15px;
-    height: 15px;
-    background: #ffffff;
-    border: 3px solid #fcef3a;
-    border-radius: 15px;
-    cursor: pointer;
-  }
-  input[type="range"]::-ms-track {
-    background: transparent;
-    border-color: transparent;
-    border-width: 7.6px 0;
-    color: transparent;
-    width: 100%;
-    height: 5px;
-    cursor: pointer;
-  }
-  input[type="range"]::-ms-fill-lower {
-    background: #fcee2b;
-    border: 0;
-    border-radius: 10px;
-  }
-  input[type="range"]::-ms-fill-upper {
-    background: #fcef3a;
-    border: 0;
-    border-radius: 10px;
-  }
-  input[type="range"]::-ms-thumb {
-    width: 15px;
-    height: 15px;
-    background: #ffffff;
-    border: 3px solid #fcef3a;
-    border-radius: 15px;
-    cursor: pointer;
-    margin-top: 0px;
-    /*Needed to keep the Edge thumb centred*/
-  }
-  input[type="range"]:focus::-ms-fill-lower {
-    background: #fcef3a;
-  }
-  input[type="range"]:focus::-ms-fill-upper {
-    background: #fcf049;
-  }
-  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-  how to remove the virtical space around the range input in IE*/
-  @supports (-ms-ime-align: auto) {
-    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-    input[type="range"] {
-      margin: 0;
-      /*Edge starts the margin from the thumb, not the track as other browsers do*/
-    }
-  }
-  &__count {
-    font-family: "VisbyCF-Bold";
-    font-weight: 700;
-    font-size: 14px;
-    padding: 25px 0px 20px;
-  }
-  &__count-currency {
-    display: inline;
-    font-family: "VisbyCF-Medium";
-    font-weight: 500;
-    color: #b1b1b1;
-  }
-}
+
 .textbox {
   &__title {
     padding: 50px 0px;
@@ -400,5 +280,117 @@
     max-width: 1200px;
     margin: 0 auto;
     line-height: 1.6em;
+  }
+}
+
+.accordion{
+  width: 100%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  &__header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      height: 20px;
+      width: 20px;
+      border: 1px solid #898989;
+      border-radius: 3px;
+      background-color: transparent;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      height: 20px;
+      width: 25px;
+      background-image: url(../images/select-arrow-down.svg);
+      background-size: cover;
+      transition: all 0.2s;
+    }
+  }
+  &__header[data-active='active'],
+  &__header.ui-accordion-header-active{
+    &::before{
+      content: '';
+      background-color: $normal;
+      border: none;
+      background-image: url(../images/confirm.svg);
+      background-repeat: no-repeat;
+      background-size: 12px 12px;
+      background-position: center center;
+    }
+    &::after{
+      content: '';
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+  &__header.ui-accordion-header-collapsed::after{
+    content: '';
+    transform: translateY(-50%) rotate(0deg);
+  }
+  &__title{
+    font-family: "VisbyCF-Bold";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1em;
+    color: $text;
+    padding-right: 5px;
+  }
+  &__count{
+    font-size: 14px;
+    color: #8E8E8E;
+  }
+  &__content{
+    padding: 10px 0 15px 25px;
+  }
+  &__input-item{
+    width: 237px;
+    height: 35px;
+    border: 1px solid #898989;
+    border-radius: 5px;
+  }
+  &__label{
+    display: inline-block;
+    margin: 5px 0;
+  }
+  &__radio-name{
+    font-size: 14px;
+    line-height: 1em;
+    max-width: 206px;
+    display: inline-block;
+    position: relative;
+    padding-left: 21px;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      border: 1px solid #898989;
+      border-radius: 50%;
+      background-color: transparent;
+    }
+  }
+  &__radio:checked + .accordion__radio-name::before{
+    content: '';
+    background-image: url(../images/radio-dot.svg);
+    background-repeat: no-repeat;
+    background-size: 8px 8px;
+    background-position: 3px 3px;
+  }
+  &__radio-count{
+    font-size: 12px;
+    color: #8E8E8E;
   }
 }
