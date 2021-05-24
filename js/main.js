@@ -1,22 +1,16 @@
-$(".select__header").each(function(){
-  $(this).on('click',selectToggle);
-})
-$(".select__item").each(function(){
-  $(this).on('click',selectChoose);
-})
-
-function selectToggle() {
-  this.parentElement.classList.toggle('is-active');
+const selectProp = {
+  width: null,
+  classes: {
+    "ui-selectmenu-button": "select",
+    "ui-selectmenu-menu": "select__item",
+  }
 }
 
-function selectChoose() {
-  let text = this.innerText,
-    select = this.closest('.select'),
-    currentText = select.querySelector('.select__current');
-  currentText.innerText = text;
-  select.classList.remove('is-active');
-}
-
+$('#brands-select').selectmenu(selectProp);
+$('#model-select').selectmenu({...selectProp, disabled: true});
+$('#spares-select').selectmenu(selectProp);
+$('#oem-select').selectmenu(selectProp);
+$('#vendor-code-select').selectmenu(selectProp);
 
 $('.content__aside-btn--mobile').on('click',()=>{
   $('.aside').css('left', '0');
@@ -226,12 +220,4 @@ $('.blog-slider').slick({
       }
     },
   ]
-});
-
-$('#brands-select').selectmenu({
-  width: null,
-  classes: {
-    "ui-selectmenu-button": "select",
-    "ui-selectmenu-menu": "select__item",
-  }
 });
