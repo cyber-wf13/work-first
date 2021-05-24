@@ -108,7 +108,7 @@ $('.slider__currency-exchange').text("4 - 230 $")
 $(".form-spares__reset").on('click', ()=>{
   $(".accordion__header").each(function(){
     $(this).attr('data-active', '');
-  })
+  });
   $(".accordion__content").each(function(){
     $(".accordion").accordion( "option", "active", false );
   });
@@ -127,57 +127,53 @@ $(".form-spares__reset").on('click', ()=>{
 
   $( "#price" ).slider( "values", [100, 23014] );
 })
-function showCard(item) {
-  item.forEach(function (value) {
-    value.parentElement.classList.remove('card-list');
-    value.parentElement.lastElementChild.setAttribute('style', ' ');
-    value.classList.remove('card-list__descr');
-    value.children.item(0).setAttribute('style', 'display:none;');
-    value.children.item(1).setAttribute('style', 'display:none;');
-    value.nextElementSibling.classList.remove('card-list__price');
-    value.nextElementSibling.children.item(2).setAttribute('style', 'display:none;');
+
+function showList (item){
+  item.each(function(){
+    $(this).parent().addClass('card-list');
+    $(this).siblings('.content__card-btn').hide();
+    $(this).addClass('card-list__descr');
+    $(this).children('.card-list__subdescr').show();
+    $(this).siblings('.card__price').addClass('card-list__price');
+    $(this).siblings('.card__price').children('.card-list__btn').show();
   })
-};
+}
 
-function showList(item) {
-  item.forEach(function (value) {
-    value.parentElement.classList.add('card-list');
-    value.parentElement.lastElementChild.setAttribute('style', 'display:none;');
-    value.classList.add('card-list__descr');
-    value.children.item(0).setAttribute('style', ' ');
-    value.children.item(1).setAttribute('style', ' ');
-    value.nextElementSibling.classList.add('card-list__price');
-    value.nextElementSibling.children.item(2).setAttribute('style', ' ');
+function showCard (item){
+  item.each(function(){
+    $(this).parent().removeClass('card-list');
+    $(this).siblings('.content__card-btn').show();
+    $(this).removeClass('card-list__descr');
+    $(this).children('.card-list__subdescr').hide();
+    $(this).siblings('.card__price').removeClass('card-list__price');
+    $(this).siblings('.card__price').children('.card-list__btn').hide();
   })
-};
-
-
-const cardDescr = document.querySelectorAll('.card__descr');
+}
 
 $('#review-list').on('change', function(){
-  showList(cardDescr);
+  showList($('.card__descr'));
 })
 
 $('#review-card').on('change', function(){
-  showCard(cardDescr);
+  showCard($('.card__descr'));
 })
 
 $('.content__review-btn').on('click', function(){
   $(this).siblings('.content__review-filter').toggle();
 })
 
-let blogText = document.querySelectorAll('.blog-card__text');
-blogText.forEach(function (value) {
-  let words = value.textContent.split(' ');
+
+$('.blog-card__text').each(function(){
+  let words = $(this).text().split(' ');
   let wordCount = 18;
-  if (words.length >= wordCount) {
+    if (words.length >= wordCount) {
     let newText = words.slice(0, wordCount);
     newText[newText.length-1] = `${newText[newText.length-1]} ...`;
-    value.textContent = newText.join(' ');
+    $(this).text(newText.join(' '));
   }else{
-    value.textContent = words.join(' ');
+    $(this).text(words.join(' '));
   }
-});
+})
 
 
 $('.brands-slider').slick({

@@ -131,7 +131,7 @@
 // let reviewCard = document.querySelector('.content__label-card');
 // let reviewBtn = document.querySelector('.content__review-btn');
 
-if (!isNull(reviewCard) || !isNull(reviewList) || !isNull(reviewBtn)) {
+// if (!isNull(reviewCard) || !isNull(reviewList) || !isNull(reviewBtn)) {
   // reviewCard.addEventListener('click', function () {
   //   reviewCard.previousElementSibling.setAttribute('checked', '');
   //   if (reviewCard.previousElementSibling.hasAttribute('checked')) {
@@ -154,16 +154,16 @@ if (!isNull(reviewCard) || !isNull(reviewList) || !isNull(reviewBtn)) {
   //     reviewBtn.nextElementSibling.setAttribute('style', 'display: block;');
   //   }
   // });
-};
+// };
 
 
-function isNull(item) {
-  if (item === null || item === undefined) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function isNull(item) {
+//   if (item === null || item === undefined) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 // function showCard(item) {
 //   item.forEach(function (value) {
 //     value.parentElement.classList.remove('card-list');
