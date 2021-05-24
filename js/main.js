@@ -127,3 +127,107 @@ $(".form-spares__reset").on('click', ()=>{
 
   $( "#price" ).slider( "values", [100, 23014] );
 })
+function showCard(item) {
+  item.forEach(function (value) {
+    value.parentElement.classList.remove('card-list');
+    value.parentElement.lastElementChild.setAttribute('style', ' ');
+    value.classList.remove('card-list__descr');
+    value.children.item(0).setAttribute('style', 'display:none;');
+    value.children.item(1).setAttribute('style', 'display:none;');
+    value.nextElementSibling.classList.remove('card-list__price');
+    value.nextElementSibling.children.item(2).setAttribute('style', 'display:none;');
+  })
+};
+
+function showList(item) {
+  item.forEach(function (value) {
+    value.parentElement.classList.add('card-list');
+    value.parentElement.lastElementChild.setAttribute('style', 'display:none;');
+    value.classList.add('card-list__descr');
+    value.children.item(0).setAttribute('style', ' ');
+    value.children.item(1).setAttribute('style', ' ');
+    value.nextElementSibling.classList.add('card-list__price');
+    value.nextElementSibling.children.item(2).setAttribute('style', ' ');
+  })
+};
+
+
+const cardDescr = document.querySelectorAll('.card__descr');
+
+$('#review-list').on('change', function(){
+  showList(cardDescr);
+})
+
+$('#review-card').on('change', function(){
+  showCard(cardDescr);
+})
+
+$('.content__review-btn').on('click', function(){
+  $(this).siblings('.content__review-filter').toggle();
+})
+
+let blogText = document.querySelectorAll('.blog-card__text');
+blogText.forEach(function (value) {
+  let words = value.textContent.split(' ');
+  let wordCount = 18;
+  if (words.length >= wordCount) {
+    let newText = words.slice(0, wordCount);
+    newText[newText.length-1] = `${newText[newText.length-1]} ...`;
+    value.textContent = newText.join(' ');
+  }else{
+    value.textContent = words.join(' ');
+  }
+});
+
+
+$('.brands-slider').slick({
+  infinite: true,
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: '<button type="button" class="slider-slick-btn slider-slick-prev"></button>',
+  nextArrow: '<button type="button" class="slider-slick-btn slider-slick-next"></button>',
+  responsive: [
+    {
+      breakpoint: 376,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+  ]
+});
+$('.product-slider').slick({
+  infinite: true,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: '<button type="button" class="slider-slick-btn product-slick-btn slider-slick-prev"></button>',
+  nextArrow: '<button type="button" class="slider-slick-btn product-slick-btn slider-slick-next"></button>',
+  responsive: [
+    {
+      breakpoint: 376,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+  ]
+});
+$('.blog-slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: '<button type="button" class="slider-slick-btn slider-slick-prev"></button>',
+  nextArrow: '<button type="button" class="slider-slick-btn slider-slick-next"></button>',
+  responsive: [
+    {
+      breakpoint: 376,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+  ]
+});
