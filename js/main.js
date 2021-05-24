@@ -227,3 +227,11 @@ $('.blog-slider').slick({
     },
   ]
 });
+
+$('#brands-select').selectmenu({
+  width: null,
+  classes: {
+    "ui-selectmenu-button": "select",
+    "ui-selectmenu-menu": "select__item",
+  }
+});

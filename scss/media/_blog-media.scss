@@ -1,5 +1,5 @@
 @media (max-width: 376px) {
-  .blog {
+  .blog-page {
     .blog-card {
       margin: 0;
       box-shadow: 0px 10px 30px #ececec;
@@ -9,7 +9,7 @@
     }
   }
 
-  .blog{
+  .blog-page{
     &__content{
       padding: 30px 0px 0px;
     }
