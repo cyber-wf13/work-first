@@ -34,21 +34,26 @@
     display: none;
   }
 }
+
 .menu {
   width: 100%;
 }
+
 .menu-list {
   display: flex;
   justify-content: space-between;
   padding-left: 65px;
   text-transform: uppercase;
 }
+
 .menu__btn {
   display: none;
 }
+
 .menu-list__item {
   position: relative;
 }
+
 .menu-list__item--active {
   font-family: "VisbyCF-Heavy";
   font-weight: 900;
@@ -64,6 +69,7 @@
     border-radius: 0px 0px 5px 5px;
   }
 }
+
 .menu-list__item-number {
   padding-right: 0px;
   padding-left: 145px;
@@ -79,47 +85,6 @@
     top: 50%;
     left: 120px;
     transform: translateY(-50%);
-  }
-}
-.footer {
-  padding-top: 50px;
-  text-align: center;
-  box-shadow: 10px -10px 30px #ececec;
-}
-.footer-list {
-  display: flex;
-  justify-content: center;
-  &__item {
-    padding: 30px 60px 30px 0px;
-    color: #a6a6a6;
-  }
-}
-.social {
-  padding-bottom: 30px;
-  &__img {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    background-color: #a6a6a6;
-    border-radius: 50%;
-    text-align: center;
-    padding-top: 3.25px;
-    margin-right: 20px;
-  }
-}
-.copyright {
-  max-width: 1200px;
-  padding: 11px 0px;
-  text-align: center;
-  border-top: 1px solid #e7e7e7;
-  border-radius: 5px;
-  margin: 0 auto;
-  &__text {
-    font-size: 14px;
-    color: #a6a6a6;
-    span {
-      color: $text;
-    }
   }
 }
 
@@ -158,16 +123,17 @@
   font-family: "VisbyCF-Bold";
   font-weight: 700;
   font-size: 36px;
-  line-height: 1em;
   color: $text;
   text-align: center;
   text-transform: uppercase;
   padding: 90px 0px 50px;
 }
+
 .title-list {
   font-family: "VisbyCF-ExtraBold";
   font-weight: 800;
 }
+
 .blog-card {
   display: flex !important;
   flex-direction: column;
@@ -203,12 +169,14 @@
     padding: 10px 0px 40px;
   }
 }
+
 .link {
   font-family: "VisbyCF-ExtraBold";
   font-weight: 800;
   font-size: 18px;
   color: $hover;
 }
+
 .card {
   min-height: 310px;
   width: 282px;
@@ -233,11 +201,11 @@
     display: inline-block;
   }
 }
+
 .form-title {
   font-family: "VisbyCF-Bold";
   font-weight: 700;
   font-size: 16px;
-  line-height: 1em;
   color: $text;
   text-align: center;
   span {
@@ -248,6 +216,7 @@
     color: #8e8e8e;
   }
 }
+
 .scroll {
   height: 100%;
   overflow-y: auto;
@@ -278,3 +247,47 @@
   }
 }
 
+.footer {
+  padding-top: 50px;
+  text-align: center;
+  box-shadow: 10px -10px 30px #ececec;
+}
+
+.footer-list {
+  display: flex;
+  justify-content: center;
+  &__item {
+    padding: 30px 60px 30px 0px;
+    color: #a6a6a6;
+  }
+}
+
+.social {
+  padding-bottom: 30px;
+  &__img {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: #a6a6a6;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 3.25px;
+    margin-right: 20px;
+  }
+}
+
+.copyright {
+  max-width: 1200px;
+  padding: 11px 0px;
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+  border-radius: 5px;
+  margin: 0 auto;
+  &__text {
+    font-size: 14px;
+    color: #a6a6a6;
+    span {
+      color: $text;
+    }
+  }
+}

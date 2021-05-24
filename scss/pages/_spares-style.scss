@@ -105,9 +105,11 @@
     padding: 0px 5px 3px;
   }
 }
+
 .tags--mobile {
   display: none;
 }
+
 .content {
   display: inline-block;
   vertical-align: top;
@@ -157,6 +159,7 @@
     transition: 0.3s;
   }
 }
+
 .content__review {
   position: relative;
   padding: 14px 20px;
@@ -189,9 +192,11 @@
     cursor: pointer;
   }
 }
+
 .aside__menu-btn--mobile {
   display: none;
 }
+
 .content__review-radio {
   position: absolute;
   left: -9999px;
@@ -201,6 +206,7 @@
     }
   }
 }
+
 .filter {
   display: none;
   position: absolute;
@@ -226,6 +232,7 @@
     }
   }
 }
+
 .card-list {
   width: 100%;
   min-height: auto;
@@ -273,6 +280,7 @@
     width: 125px;
   }
 }
+
 .page-number {
   font-size: 30px;
   color: #878787;
