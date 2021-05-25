@@ -6,6 +6,14 @@ const selectProp = {
   }
 }
 
+$('.header__menu-btn').on('click', ()=>{
+  $('.menu--mobile').css('right', 0);
+})
+
+$('.menu__btn--mobile').on('click', ()=>{
+  $('.menu--mobile').css('right', '9999px');
+})
+
 $('#brands-select').selectmenu(selectProp);
 $('#model-select').selectmenu({...selectProp, disabled: true});
 $('#spares-select').selectmenu(selectProp);
