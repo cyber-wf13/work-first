@@ -1,10 +1,5 @@
 @import "fonts";
 @import "vars";
-.wrapper {
-  max-width: 1220px;
-  margin: 0 auto;
-}
-
 .container {
   max-width: 1220px;
   margin: 0 auto;
@@ -151,6 +146,7 @@
   font-family: "VisbyCF-Bold";
   font-weight: 700;
   font-size: 36px;
+  line-height: 1em;
   color: $text;
   text-align: center;
   text-transform: uppercase;
@@ -211,6 +207,7 @@
   text-align: center;
   outline: none;
   cursor: pointer;
+  margin: 0 auto;
   &__descr {
     font-family: "VisbyCF-Bold";
     font-weight: 700;
@@ -280,10 +277,6 @@
   box-shadow: 10px -10px 30px #ececec;
   &__wrapper{
     text-align: center;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
   }
 }
 
@@ -292,14 +285,11 @@
   justify-content: center;
   align-items: center;
   margin: 30px 0;
-  &__wrapper{
-    display: flex;
-    justify-content: space-around;
-    flex-basis: 50%;
-  }
+  flex-wrap: wrap;
   &__item {
     color: #a6a6a6;
     padding: 0 2.5px;
+    flex-basis: 10%;
   }
 }
 

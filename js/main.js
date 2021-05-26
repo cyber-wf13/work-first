@@ -177,7 +177,6 @@ $('.blog-card__text').each(function(){
   }
 })
 
-
 $('.brands-slider').slick({
   infinite: true,
   slidesToShow: 6,
@@ -187,14 +186,32 @@ $('.brands-slider').slick({
   nextArrow: '<button type="button" class="slider-slick-btn slider-slick-next"></button>',
   responsive: [
     {
-      breakpoint: 376,
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 5,
+      }
+    },
+    {
+      breakpoint: 620,
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 420,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 340,
+      settings: {
+        slidesToShow: 2,
       }
     },
   ]
 });
+
 $('.product-slider').slick({
   infinite: true,
   slidesToShow: 4,
@@ -204,10 +221,21 @@ $('.product-slider').slick({
   nextArrow: '<button type="button" class="slider-slick-btn product-slick-btn slider-slick-next"></button>',
   responsive: [
     {
-      breakpoint: 376,
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 900,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 610,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
       }
     },
   ]
@@ -217,14 +245,19 @@ $('.blog-slider').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   arrows: true,
-  prevArrow: '<button type="button" class="slider-slick-btn slider-slick-prev"></button>',
-  nextArrow: '<button type="button" class="slider-slick-btn slider-slick-next"></button>',
+  prevArrow: '<button type="button" class="slider-slick-btn blog-slick-btn slider-slick-prev"></button>',
+  nextArrow: '<button type="button" class="slider-slick-btn blog-slick-btn slider-slick-next"></button>',
   responsive: [
     {
-      breakpoint: 376,
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 800,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
       }
     },
   ]
