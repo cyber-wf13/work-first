@@ -1,7 +1,7 @@
 @import "fonts";
 @import "vars";
 .container {
-  max-width: 1220px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -153,11 +153,6 @@
   padding: 90px 0px 50px;
 }
 
-.title-list {
-  font-family: "VisbyCF-ExtraBold";
-  font-weight: 800;
-}
-
 .blog-card {
   display: flex !important;
   flex-direction: column;
@@ -245,7 +240,6 @@
 .scroll {
   height: 100%;
   overflow-y: auto;
-  padding-right: 20px;
   scrollbar-color: #e7e7e7 #989898;
   scrollbar-width: thin;
   &::-webkit-scrollbar {
@@ -269,6 +263,51 @@
     max-width: 1200px;
     margin: 0 auto;
     line-height: 1.6em;
+  }
+}
+
+.page-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 30px;
+  color: #878787;
+  text-transform: uppercase;
+  text-align: center;
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__arrow-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+    background-position: center center;
+    height: 24px;
+    width: 24px;
+  }
+  &__arrow-prev {
+    background-image: url("../images/page-number-arrow-prev.svg");
+    margin-right: 20px;
+  }
+  &__arrow-next {
+    background-image: url("../images/page-number-arrow-next.svg");
+    margin-left: 20px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__list-item{
+    padding: 0 20px;
+  }
+  &__count{
+    margin-left: 70px;
   }
 }
 

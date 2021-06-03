@@ -1,18 +1,12 @@
-@media (max-width: 376px) {
-  .about{
-    &__content{
-      padding: 30px 0px 30px;
-    }
-    &__text{
-      padding: 20px 0px 0px;
-      font-size: 14px;
-    }
-    &__list-item{
-      font-size: 14px;
-      padding: 5px 0px 5px 20px;
-    }
-    &__column-list{
-      padding: 30px 0px 0px;
+@media (max-width: 768px){
+  .title-list{
+    width: 100%;
+    text-align: center;
+  }
+  .about__list-column{
+    .about__list-item{
+      max-width: 100%;
+      float: none;
     }
   }
 }

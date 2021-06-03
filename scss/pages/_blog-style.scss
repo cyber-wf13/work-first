@@ -1,15 +1,17 @@
 .blog-page {
+  padding: 60px 0 90px;
   &__content {
-    padding: 60px 0px;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
   }
   &__blog-card {
     margin-bottom: 30px;
     margin-right: 17px;
     box-shadow: 0px 10px 30px #ececec;
+    flex-basis: 31.8%;
   }
-  &__page-number {
-    display: none;
+  &__page-number{
+    margin-top: 30px;
   }
 }
