@@ -128,7 +128,7 @@ $(".form-spares__reset").on('click', ()=>{
   $(".accordion__header").each(function(){
     $(this).attr('data-active', '');
   });
-  
+
   $(".accordion__content").each(function(){
     $(".accordion").accordion( "option", "active", false );
   });
@@ -149,35 +149,11 @@ $(".form-spares__reset").on('click', ()=>{
   $( "#price" ).slider( "values", [100, 23014] );
 })
 
-function showList (item){
-  item.each(function(){
-    $(this).parent().addClass('card-list');
-    // $(this).siblings('.content__card-btn').hide();
-    // $(this).addClass('card-list__descr');
-    // $(this).children('.card-list__subdescr').show();
-    // $(this).siblings('.card__price').addClass('card-list__price');
-    // $(this).siblings('.card__price').children('.card-list__btn').show();
-  })
-}
-
-function showCard (item){
-  item.each(function(){
-    $(this).parent().removeClass('card-list');
-    $(this).siblings('.content__card-btn').show();
-    $(this).removeClass('card-list__descr');
-    $(this).children('.card-list__subdescr').hide();
-    $(this).siblings('.card__price').removeClass('card-list__price');
-    $(this).siblings('.card__price').children('.card-list__btn').hide();
-  })
-}
-
 $('#review-list').on('change', function(){
-  // showList($('.card__descr'));
   $('.content__card-items').addClass('card-list')
 })
 
 $('#review-card').on('change', function(){
-  // showCard($('.card__descr'));
   $('.content__card-items').removeClass('card-list')
 })
 

@@ -280,14 +280,6 @@
   }
 }
 
-.card-list__subdescr{
-  display: none;
-}
-
-.card-list__btn{
-  display: none;
-}
-
 .card-list {
   flex-direction: column;
   align-items: flex-start;
@@ -296,18 +288,40 @@
     display: none;
   }
 
-  .card-list__subdescr{
-    display: block;
+  .content__card{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-basis: auto;
+    min-height: auto;
   }
 
-  .card__price{
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 30px;
+  .card__descr{
+    width: 100%;
+    min-height: auto;
+    text-align: left;
+    padding: 0;
+    max-width: 100%;
+    margin: 0 5px 0 20px;
+  }
+
+  .card-list__subdescr{
+    display: block;
+    font-family: "VisbyCF-Medium";
+    font-weight: 500;
+    font-size: 16px;
+    color: #717171;
+    padding-top: 20px;
+  }
+
+  &__subdescr--color {
+    font-family: "VisbyCF-DemiBold";
+    font-weight: 600;
+    color: $text;
   }
 
   .card-list__btn{
-    display: inline-block;
+    display: block;
     margin-top: 30px;
     border: none;
     border-radius: 7px;
@@ -319,42 +333,14 @@
     height: 43px;
     width: 125px;
   }
+}
 
-  .card__descr{
-    width: 100%;
-    min-height: auto;
-    text-align: left;
-  }
+.card-list__subdescr{
+  display: none;
+}
 
-  &:nth-child(3n + 3) {
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-  &__descr {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 386px;
-    padding: 0;
-    margin-left: 20px;
-  }
-  &__subdescr {
-    display: block;
-    font-family: "VisbyCF-Medium";
-    font-weight: 500;
-    font-size: 16px;
-    color: #717171;
-    padding-top: 20px;
-  }
-  &__subdescr--color {
-    font-family: "VisbyCF-DemiBold";
-    font-weight: 600;
-    color: $text;
-  }
-  &__price {
-    // display: inline-block;
-    // vertical-align: top;
-    // padding-left: 30px;
-  }
+.card-list__btn{
+  display: none;
 }
 
 .accordion{
