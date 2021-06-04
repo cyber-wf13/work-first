@@ -183,6 +183,7 @@
     left: 50%;
     transform: translateX(-50%);
     transition: 0.3s;
+    padding: 10px 0;
   }
   &__aside-btn--mobile {
     display: none;
@@ -332,6 +333,7 @@
     font-size: 14px;
     height: 43px;
     width: 125px;
+    padding: 10px 0;
   }
 }
 
