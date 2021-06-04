@@ -218,19 +218,19 @@ $('.product-slider').slick({
   nextArrow: '<button type="button" class="slider-slick-btn product-slick-btn slider-slick-next"></button>',
   responsive: [
     {
-      breakpoint: 1200,
+      breakpoint: 1220,
       settings: {
         slidesToShow: 3,
       }
     },
     {
-      breakpoint: 900,
+      breakpoint: 920,
       settings: {
         slidesToShow: 2,
       }
     },
     {
-      breakpoint: 610,
+      breakpoint: 640,
       settings: {
         slidesToShow: 1,
       }
@@ -246,13 +246,13 @@ $('.blog-slider').slick({
   nextArrow: '<button type="button" class="slider-slick-btn blog-slick-btn slider-slick-next"></button>',
   responsive: [
     {
-      breakpoint: 1200,
+      breakpoint: 1220,
       settings: {
         slidesToShow: 2,
       }
     },
     {
-      breakpoint: 800,
+      breakpoint: 820,
       settings: {
         slidesToShow: 1,
       }

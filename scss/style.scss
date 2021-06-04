@@ -140,29 +140,29 @@ body {
 
 .slider-slick-prev {
   background-image: url("../images/slider-arrow-prev.svg");
-  left: -60px;
+  left: -10px;
 }
 
 .slider-slick-next {
   background-image: url("../images/slider-arrow-next.svg");
-  right: -60px;
+  right: -10px;
 }
 
 .product-slider {
-  max-width: 1200px;
+  max-width: 1220px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .product-slick-btn {
   top: 25%;
-  transform: translateY(0);
 }
 
 .blog-slider {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 15px 20px;
 
   .blog-card{
     margin: 0 auto;
