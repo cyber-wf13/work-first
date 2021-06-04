@@ -237,6 +237,9 @@ $('.product-slider').slick({
     },
   ]
 });
+
+
+
 $('.blog-slider').slick({
   infinite: true,
   slidesToShow: 3,
@@ -253,6 +256,35 @@ $('.blog-slider').slick({
     },
     {
       breakpoint: 820,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+  ]
+});
+
+$('.other-slider').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: '<button type="button" class="slider-slick-btn product-slick-btn slider-slick-prev"></button>',
+  nextArrow: '<button type="button" class="slider-slick-btn product-slick-btn slider-slick-next"></button>',
+  responsive: [
+    {
+      breakpoint: 1220,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 920,
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 640,
       settings: {
         slidesToShow: 1,
       }

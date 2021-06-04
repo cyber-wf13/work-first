@@ -1,0 +1,135 @@
+.product-content{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 90px;
+}
+
+.product-content__wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 90px 0 0 25px;
+  flex-basis: 77%;
+  max-width: 77%;
+}
+
+.gallery{
+  &__tags-item{
+    background-color: $normal;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 3px 7px;
+  }
+  &__tags-vendor{
+    color: #717171;
+    font-family: 'VisbyCF-Medium';
+    font-size: 14px;
+    strong{
+      font-family: 'VisbyCF-DemiBold';
+      color: $text;
+    }
+    margin-left: 25px;
+  }
+  &__title{
+    font-family: 'VisbyCF-Bold';
+    font-size: 18px;
+    padding: 15px 0 30px;
+  }
+  &__content{
+    display: flex;
+  }
+  &__images{
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__images-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__image{
+    margin-left: 25px;
+  }
+  &__info{
+    margin-left: 30px;
+  }
+  &__table-title{
+    font-family: 'VisbyCF-Medium';
+    font-size: 14px;
+    color: #717171;
+  }
+  &__table-content{
+    font-size: 14px;
+    max-width: 362px;
+    padding-left: 40px;
+  }
+  &__price{
+    margin-top: 15px;
+    strong{
+      font-family: 'VisbyCF-ExtraBold';
+      font-size: 22px;
+    }
+  }
+  &__price-count{
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  &__price-count--color{
+    color: #B1B1B1;
+  }
+  &__btn{
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 7px;
+    border: none;
+    padding: 10px 20px;
+    background-color: $normal;
+    margin-left: 50px;
+  }
+}
+
+.other{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 70px;
+  &__head{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #E7E7E7;
+    border-radius: 5px;
+    padding-bottom: 22px;
+  }
+  &__content{
+    max-width: 100%;
+  }
+  &__title{
+    font-family: 'VisbyCF-Bold';
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 0 30px;
+    position: relative;
+    cursor: pointer;
+    &::before{
+      display: none;
+      content: '';
+      position: absolute;
+      bottom: -22px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: $normal;
+      border-radius: 2px 2px 0px 0px;
+    }
+  }
+  &__radio:checked + .other__title::before{
+    display: block;
+  }
+}
+
+.other-slider{
+  margin-top: 30px;
+}
