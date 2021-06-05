@@ -1,0 +1,78 @@
+.blog-wrapper{
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0 90px;
+}
+
+.blog-single{
+  flex-basis: 65%;
+  margin-right: 30px;
+  &__title{
+    font-family: 'VisbyCF-ExtraBold';
+    font-size: 24px;
+  }
+  &__date{
+    display: inline-block;
+    font-family: 'VisbyCF-ExtraBold';
+    font-size: 18px;
+    color: $hover;
+    margin: 30px 0 0;
+  }
+  &__text{
+    font-size: 16px;
+    line-height: 1.6em;
+    padding: 20px 0;
+  }
+  &__img{
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+  }
+  &__paragraph-title{
+    font-family: 'VisbyCF-ExtraBold';
+    font-size: 18px;
+  }
+  &__paragraph-img{
+    float: left;
+    margin: 20px 30px 5px 0;
+  }
+  &__author{
+    font-family: 'VisbyCF-Medium';
+    strong{
+      font-family: 'VisbyCF-ExtraBold';
+    }
+  }
+}
+
+.blog-aside{
+  flex-basis: 30%;
+  &__title{
+    font-family: 'VisbyCF-Bold';
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__card{
+    box-shadow: 0px 10px 30px #ECECEC;
+    border-radius: 10px;
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    font-family: 'VisbyCF-ExtraBold';
+    margin: 20px 0;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      background-color: $normal;
+      .link {
+        color: $text;
+      }
+    }
+  }
+  &__card-title{
+    padding-bottom: 20px;
+  }
+  &__card-link{
+    font-size: 14px;
+  }
+}

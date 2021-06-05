@@ -1,0 +1,16 @@
+@media (max-width: 925px){
+  .blog-wrapper{
+    flex-direction: column;
+    padding: 40px 0 70px;
+  }
+
+  .blog-single{
+    flex-basis: auto;
+    margin-right: 0;
+  }
+
+  .blog-aside{
+    flex-basis: auto;
+    margin-top: 30px;
+  }
+}
