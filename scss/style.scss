@@ -159,6 +159,38 @@ body {
   top: 25%;
 }
 
+.card-product{
+  position: relative;
+  &__card-btn {
+    display: block;
+    margin-top: 30px;
+    border: none;
+    border-radius: 7px;
+    outline: none;
+    background-color: $normal;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 43px;
+    width: 125px;
+    z-index: -1;
+    opacity: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+    padding: 10px 0;
+  }
+  &:hover {
+    .card-product__card-btn {
+      z-index: 10;
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+
 .blog-slider {
   max-width: 1240px;
   margin: 0 auto;

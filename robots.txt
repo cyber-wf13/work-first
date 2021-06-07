@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: pages/page-blog-single.html
+Disallow: pages/page-product.html

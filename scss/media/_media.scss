@@ -197,6 +197,24 @@
   }
 }
 
+@media (max-width: 390px) {
+  .popup {
+    &__input{
+      width: 280px;
+    }
+    &__input-message {
+      min-width: 280px;
+      max-width: 280px;
+    }
+    &__label[for="name"]{
+      left: 35%;
+    }
+    &__label[for="phone"]{
+      left: 43%;
+    }
+  }
+}
+
 @media (max-width: 360px) {
   .form{
     width: 300px
@@ -208,6 +226,7 @@
     }
   }
 }
+
 
 @import "spares-media";
 @import "product-media";

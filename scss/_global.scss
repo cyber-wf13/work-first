@@ -25,7 +25,7 @@
     justify-content: space-between;
     padding: 20px 0px;
   }
-  &__btn-box{
+  &__btn-box {
     display: none;
   }
   &__mobile-btn {
@@ -295,7 +295,7 @@
   color: #878787;
   text-transform: uppercase;
   text-align: center;
-  &__wrapper{
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -323,18 +323,131 @@
     justify-content: space-between;
     align-items: center;
   }
-  &__list-item{
+  &__list-item {
     padding: 0 20px;
   }
-  &__count{
+  &__count {
     margin-left: 70px;
+  }
+}
+
+.popup {
+  border-radius: 10px;
+  background-color: #222;
+  max-width: 490px;
+  margin: 0 auto;
+  padding: 20px 0 30px;
+  position: relative;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  &__title {
+    font-family: "VisbyCF-Bold";
+    font-size: 24px;
+    color: #fff;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #cccccc;
+    width: 100%;
+    text-transform: uppercase;
+    position: relative;
+  }
+  &__content{
+    padding: 0 10px;
+    width: 100%;
+  }
+  &__text {
+    color: #fff;
+    padding: 20px 0 5px;
+  }
+  &__product {
+    color: $normal;
+    padding-bottom: 10px;
+  }
+  &__input {
+    width: 360px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    padding-left: 10px;
+    font-size: 14px;
+    background-color: transparent;
+    margin: 10px 0;
+    outline: none;
+    color: #fff;
+    &:focus {
+      border: 1px solid $normal;
+    }
+  }
+  &__input:valid + &__label {
+    display: none;
+  }
+  &__input:focus + &__label {
+    display: none;
+  }
+  &__label {
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    color: $normal;
+  }
+  &__label[for="name"]{
+    top: 20px;
+    left: 30%;
+  }
+  &__label[for="phone"]{
+    top: 80px;
+    left: 36%;
+  }
+  &__input-items{
+    position: relative;
+  }
+  &__input-message {
+    height: 120px;
+    padding-top: 12px;
+    min-height: 120px;
+    max-height: 120px;
+    min-width: 360px;
+    max-width: 360px;
+    resize: none;
+  }
+  &__btn {
+    width: 160px;
+    height: 40px;
+    background-color: $normal;
+    border-radius: 7px;
+    font-family: "VisbyCF-ExtraBold";
+    color: #000;
+    text-align: center;
+    border: none;
+    margin-top: 10px;
+  }
+  &__close-btn{
+    position: absolute;
+    top: -45px;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    border: none !important;
+    border-radius: 7px;
+    opacity: 1 !important;
+    background: $normal url(../images/close-btn.svg) !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    transition: 0.2s;
   }
 }
 
 .footer {
   padding-top: 50px;
   box-shadow: 10px -10px 30px #ececec;
-  &__wrapper{
+  &__wrapper {
     text-align: center;
   }
 }

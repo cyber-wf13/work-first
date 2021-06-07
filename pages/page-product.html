@@ -24,6 +24,7 @@
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="../css/slick.css">
   <link rel="stylesheet" href="../css/slick-theme.css">
+  <link rel="stylesheet" href="../css/magnific-popup.css">
   <link rel="stylesheet" href="../css/style.min.css">
   <title>Запчасти</title>
 </head>
@@ -89,9 +90,30 @@
     </div>
   </div>
 
-
-
-
+  <div class="popup mfp-hide" id="popup-delivery">
+    <form class="popup__form" action="#">
+      <div class="popup__wrapper">
+        <button class="popup__close-btn mfp-close"></button>
+        <h2 class="popup__title">Заказ</h2>
+        <div class="popup__content">
+          <p class="popup__text">Оставьте ваше имя и номер телефона
+            и наш менеджер перезвонит вам</p>
+          <span class="popup__product">Амортизатор задний левый Land Rover Range Rover Sport Range Rover Sport (LS) 2005
+            -
+            2013</span>
+          <div class="popup__input-items">
+            <input class="popup__input" type="text" placeholder="Ваше имя" id="name" required>
+            <label class="popup__label" for="name">*</label>
+            <input class="popup__input" type="tel" placeholder="Ваш телефон" id="phone" required>
+            <label class="popup__label" for="phone">*</label>
+            <textarea class="popup__input popup__input-message" name="delivery-message" cols="30" rows="10"
+              placeholder="Коментарий"></textarea>
+            <input class="popup__btn" type="submit" value="Отправить">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 
   <div class="container">
 
@@ -612,7 +634,7 @@
 
       <div class="product-content__wrapper">
 
-        <button class="product-content__aside-btn--mobile">Фильтр</button>      
+        <button class="product-content__aside-btn--mobile">Фильтр</button>
         <section class="gallery">
           <div class="gallery__tags-info">
             <span class="gallery__tags-item">в наличии</span>
@@ -666,16 +688,17 @@
 
                   <tr class="gallery__table-row">
                     <td class="gallery__table-cell gallery__table-title">Коментарий</td>
-                    <td class="gallery__table-cell gallery__table-content">Сайт использует файлы cookie, чтобы гарантировать максимальное </td>
+                    <td class="gallery__table-cell gallery__table-content">Сайт использует файлы cookie, чтобы
+                      гарантировать максимальное </td>
                   </tr>
                 </tbody>
               </table>
 
               <div class="gallery__price">
-              <span class="gallery__price-count"> 
-                <strong>100</strong> UAH <span class="gallery__price-count gallery__price-count--color">/ 3$</span>
+                <span class="gallery__price-count">
+                  <strong>100</strong> UAH <span class="gallery__price-count gallery__price-count--color">/ 3$</span>
                 </span>
-                <button class="gallery__btn">Заказать</button>
+                <a class="gallery__btn" href="#popup-delivery">Заказать</a>
               </div>
 
             </div>
@@ -706,7 +729,7 @@
                   </div>
                 </div>
               </div>
-      
+
               <div class="other-slider__item">
                 <div class="card ">
                   <img class="card__img" src="../images/product-2.png" alt="">
@@ -716,7 +739,7 @@
                   </div>
                 </div>
               </div>
-      
+
               <div class="other-slider__item">
                 <div class="card ">
                   <img class="card__img" src="../images/product-3.png" alt="">
@@ -726,7 +749,7 @@
                   </div>
                 </div>
               </div>
-  
+
               <div class="other-slider__item">
                 <div class="card ">
                   <img class="card__img" src="../images/product-1.png" alt="">
@@ -736,7 +759,7 @@
                   </div>
                 </div>
               </div>
-      
+
               <div class="other-slider__item">
                 <div class="card ">
                   <img class="card__img" src="../images/product-2.png" alt="">
@@ -746,7 +769,7 @@
                   </div>
                 </div>
               </div>
-      
+
               <div class="other-slider__item">
                 <div class="card ">
                   <img class="card__img" src="../images/product-3.png" alt="">
@@ -756,15 +779,18 @@
                   </div>
                 </div>
               </div>
-  
+
             </div>
 
             <div class="other-info">
               <ul class="other-info__list">
                 <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака зачастую
-                  возникают тогда, когда автомобиль был заправлен некачественным бензином. После того, как водитель замечает,
-                  что в бак было залито топливо низкого качества, слить такой бензин, наиболее разумное решение, чтобы избежать
-                  возможных поломок двигателя. Второй причиной, по которой может понадобиться слить топливо из бака может стать
+                  возникают тогда, когда автомобиль был заправлен некачественным бензином. После того, как водитель
+                  замечает,
+                  что в бак было залито топливо низкого качества, слить такой бензин, наиболее разумное решение, чтобы
+                  избежать
+                  возможных поломок двигателя. Второй причиной, по которой может понадобиться слить топливо из бака
+                  может стать
                   необходимость использования бензина </li>
                 <li class="other-info__list-item">Ситуации, когда необходимо слить топливо из бака зачастую
                   возникают тогда, когда автомобиль был заправлен некачественным бензином. </li>
@@ -788,8 +814,10 @@
           <h2 class="title textbox__title">Блок для SEO текста</h2>
           <div class="textbox__text">
             <p class="textbox__text-inner">
-              Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в
-              буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и
+              Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут
+              они в
+              буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране
+              и
               обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены
               предложения
               залетают прямо в рот.
@@ -800,7 +828,7 @@
       </div>
     </div>
 
-    
+
   </div>
 
 
@@ -809,14 +837,14 @@
       <div class="footer__wrapper">
         <img src="../images/logo.svg" alt="AutoHub" class="logo">
         <ul class="footer-list">
-          <li class="footer-list__item"><a href="" class="footer-list__link">О Нас</a></li>
+          <li class="footer-list__item"><a href="page-about.html" class="footer-list__link">О Нас</a></li>
           <li class="footer-list__item"><a href="" class="footer-list__link">Оплата</a></li>
           <li class="footer-list__item"><a href="" class="footer-list__link">Доставка</a></li>
           <li class="footer-list__item"><a href="" class="footer-list__link">Гарантия</a></li>
           <li class="footer-list__item"><a href="" class="footer-list__link">Скидки</a></li>
           <li class="footer-list__item"><a href="" class="footer-list__link">Новости</a></li>
           <li class="footer-list__item"><a href="" class="footer-list__link">Карьера</a></li>
-          <li class="footer-list__item"><a href="" class="footer-list__link">Контакты</a></li>
+          <li class="footer-list__item"><a href="page-contacts.html" class="footer-list__link">Контакты</a></li>
         </ul>
         <div class="social">
           <a href="" class="social__link"><img src="../images/instagram.svg" alt="instagram"></a>
